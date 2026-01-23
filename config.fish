@@ -7,10 +7,18 @@ end
 
 if status is-interactive
   alias n 'nvim'
-  alias nvind 'cd ~/.config/nvim/'
+  alias ndir 'cd ~/.config/nvim/'
   alias p 'pnpm'
-  alias fconf 'nvim ~/.config/fish/config.fish'
+  
+  alias conff 'nvim ~/.config/fish/config.fish'
   alias srcf 'source ~/.config/fish/config.fish'
+
+  alias dnfi 'sudo dnf install -y'
+  alias dnfr 'sudo dnf remove -y'
+  alias dnfu 'sudo dnf upgrade'
+
+  alias gaac 'git add . && git commit -m'
+  alias gp   'git push'
 end
 
 # pnpm
