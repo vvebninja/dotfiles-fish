@@ -8,11 +8,14 @@ if not functions -q fisher
 end
 
 if status is-interactive
+  abbr -a proj  'cd ~/Projects/'
+
   alias n     'nvim'
   alias ndir  'cd ~/.config/nvim/'
   alias p     'pnpm'
 
-  alias nrd    'npm run dev'
+  alias nr    'npm run'
+  alias nrd   'npm run dev'
   alias ni    'npm i'
   
   alias conff 'nvim ~/.config/fish/config.fish'
@@ -24,6 +27,9 @@ if status is-interactive
 
   alias gp    'git push'
   alias gst   'git status'
+
+  alias ghrc   'gh repo clone'
+  alias ghrl   'gh repo list'
 end
 
 # pnpm
@@ -31,3 +37,10 @@ set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
   set -gx PATH "$PNPM_HOME" $PATH
 end
+
+# pnpm
+set -gx PNPM_HOME "/home/vvebninja/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
